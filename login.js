@@ -47,7 +47,7 @@ const en_login= document.getElementById("submit")
         const valid = await validNick(Nick1)
 
         if(valid){
-            window.location='index.html'
+            window.location='usuario-registrado.html'
         }
         else{
             alert('Aun no eres un Fresh, Sorry for you!')
