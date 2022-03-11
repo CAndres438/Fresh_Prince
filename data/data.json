@@ -1,0 +1,42 @@
+{
+    "categorias": [
+        {
+            "id": "1",
+            "nombre": "Fresh Stripe Sweater",
+            "imagen": "./images/1.png",
+            "precio" : "85.00"
+
+        },
+        {
+            "id": "2",
+            "nombre": "Fresh Black Tie-Dye Hoodie",
+            "imagen": "./images/2.png",
+            "precio" : "75.00"
+
+        },
+        {
+            "id": "3",
+            "nombre": "Pose For It Tee",
+            "imagen":"./images/2.png",
+            "precio" : "45.00"
+
+        },
+        {
+            "id": "4",
+            "nombre": "Crown Sweatshirt",
+            "imagen": "./images/2.png",
+            "precio" : "85.00"
+
+        }
+    ],
+    "usuarios":[
+        {
+            "id": "1",
+            "nombre": "Pepito",
+            "apellido" : "Pérez",
+            "correo": "pepito@gmail.com"
+        }
+
+    ]
+    
+}
