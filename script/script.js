@@ -54,3 +54,5 @@ main.addEventListener('click', (e) => {
         window.location.href = 'detail.html'
     }
 })
+
+console.log(main);

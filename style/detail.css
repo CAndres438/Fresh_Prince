@@ -108,3 +108,41 @@ main{
 }
 
 
+/*modal*/
+
+.modal-dialog {
+    position: relative;
+    width: auto;
+    /* margin: 0.5rem; */
+    pointer-events: none;
+}
+
+
+.modal {
+    position: fixed;
+    top: -30px;
+    left: 850px;
+    z-index: 1055;
+    display: none;
+    width: 40%;
+    height: 100vh;
+    overflow-x: hidden;
+    overflow-y: auto;
+    outline: 0;
+    right: -3
+}
+
+.modalito{
+    width: 100%;
+    display:flex;
+
+}
+
+.modalito img{
+    width: 40%;
+}
+
+.modalito .textModal{
+    width: 100%;
+    flex-direction: column;
+}

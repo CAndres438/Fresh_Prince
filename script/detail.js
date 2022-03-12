@@ -1,5 +1,7 @@
 const main = document.getElementById('main');
 
+let productos = []
+
 let api = 'https://viajes02.herokuapp.com/categorias';
 
 let idLocal = JSON.parse(localStorage.getItem('ID'));
@@ -25,6 +27,20 @@ const mostrarInfo = async (api) => {
         const imagen3 = images[2]['imagen3'];
 
         if (element.id == idLocal) {
+
+            let product = {
+                nombre : nombre,
+                imagen: imagen1,
+                precio: precio,
+                cantidad: 1
+
+            }
+
+            productos.push(product);
+
+            localStorage.setItem('producto', JSON.stringify(product))
+
+            
 
             main.innerHTML += `
             <div class="container-fluid" id="containerDetail">
@@ -60,7 +76,7 @@ const mostrarInfo = async (api) => {
                         </form>
 
                         <div class="btnCar">
-                            <button class="add">
+                            <button id="ADD" class="add" data-bs-toggle="modal" data-bs-target="#exampleModal">
                                 ADD TO CART
                             </button> <br>
 
@@ -83,14 +99,42 @@ const mostrarInfo = async (api) => {
 }
 
 
-main.addEventListener('click', (e) => {
-    e.preventDefault()
-    const btn = e.target.classList.contains('card-img-top')
-    const id = e.target.id;
 
-    if (btn) {
+let btnAdd = document.querySelector('#main');
 
-        localStorage.setItem('ID', JSON.stringify(id));
-        window.location.href = 'detail.html'
-    }
+console.log(btnAdd);
+
+btnAdd.addEventListener('click', (e)=>{
+    modal()
 })
+
+
+const modal = () => {
+
+    let traerDatos = JSON.parse(localStorage.getItem('producto'));
+    console.log(traerDatos);
+
+    let modalBody = document.getElementById('modal-body')
+
+    modalBody.innerHTML = ''
+    modalBody.innerHTML += `
+        <div class="modalito">
+            <div>
+                <img src="${traerDatos.imagen}">
+            </div>
+            
+            <div class="textModal">
+                <strong><p>${traerDatos.nombre}</p></strong>
+                <strong><p>$${traerDatos.precio}</p></strong>
+                <strong><p>${traerDatos.cantidad}</p></strong>
+
+                <button class="btn btn-danger">Eliminar</<button>
+            </div>
+        </div>
+    
+     `
+    
+
+    
+}
+
