@@ -14,7 +14,6 @@ const mostrarInfo = async (api) => {
     const resp = await fetch(api);
     const data = await resp.json();
 
-
     main.innerHTML = '';
 
     data.forEach(element => {
@@ -22,10 +21,10 @@ const mostrarInfo = async (api) => {
         const { images, nombre, id, precio, descripción } = element;
 
         const imagen1 = images[0]['imagen1'];
-        const imagen2 = images[0]['imagen2'];
-        const imagen3 = images[0]['imagen3'];
+        const imagen2 = images[1]['imagen2'];
+        const imagen3 = images[2]['imagen3'];
 
-        if (element.id === idLocal) {
+        if (element.id == idLocal) {
 
             main.innerHTML += `
             <div class="container-fluid" id="containerDetail">
@@ -50,7 +49,7 @@ const mostrarInfo = async (api) => {
 
                     <div class="col-4">
                         <h1>${nombre}</h1>
-                        <p>${precio}</p>
+                        <p>$${precio}</p>
                         <h4>Size</h4>
                         <form>
                             <input type="button" name="talla" value="s" id="s" class="btnTalla">

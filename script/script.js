@@ -50,7 +50,7 @@ main.addEventListener('click', (e) => {
 
     if (btn) {
 
-        localStorage.setItem('ID', id);
+        localStorage.setItem('ID', JSON.stringify(id));
         window.location.href = 'detail.html'
     }
 })
