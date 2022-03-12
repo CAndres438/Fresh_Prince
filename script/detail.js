@@ -81,3 +81,16 @@ const mostrarInfo = async (api) => {
     });
 
 }
+
+
+main.addEventListener('click', (e) => {
+    e.preventDefault()
+    const btn = e.target.classList.contains('card-img-top')
+    const id = e.target.id;
+
+    if (btn) {
+
+        localStorage.setItem('ID', JSON.stringify(id));
+        window.location.href = 'detail.html'
+    }
+})
