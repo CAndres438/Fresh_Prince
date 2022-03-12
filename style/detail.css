@@ -36,7 +36,8 @@ main{
 }
 
 .col-4{
-    padding-top:3%
+    padding-top:3%;
+    height:50%;
 }
 
 .btnTalla{
@@ -75,4 +76,31 @@ main{
 
 .description{
     margin-top: 8%;
+}
+
+
+/*sugerencias*/
+
+.sugerencia{
+    display: flex;
+    flex-direction:column;
+
+}
+
+.conteSugerencias{
+    display: flex;
+    text-align: center;
+    flex-direction: row;
+    justify-content:center
+}
+
+.h2{
+    text-align: center;
+    margin-bottom: 3%;
+}
+
+.card{
+    width: 18%;
+    margin: 0 3% 5% 0;
+    
 }
