@@ -1,8 +1,3 @@
-const catenedorCards = document.getElementById('catenedorCards');
-const main = document.getElementById('main');
-
-
-
 apiCategoria = 'https://viajes02.herokuapp.com/categorias';
 
 
